@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/frame1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content" >
+
+                <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/gm_left"
+                    android:src="@drawable/up"
+                    android:background="@drawable/round_button"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content" >
+
+                <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/gm_down"
+                    android:src="@drawable/left"
+                    android:background="@drawable/round_button"
+                    />
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:clickable="false"
+                    android:background="@color/transparent"/>
+
+                <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/gm_up"
+                    android:src="@drawable/right"
+                    android:background="@drawable/round_button"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content" >
+
+                <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/gm_right"
+                    android:src="@drawable/down"
+                    android:background="@drawable/round_button"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frame1"
+        android:id="@+id/frame2"
+        android:layout_marginTop="-25dp">
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/gm_l2"
+            android:text="L2"
+            android:textSize="20dp"
+            android:rotation="90"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/round_button"
+            />
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/gm_l1"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/round_button"
+            android:text="L1"
+            android:textSize="20dp"
+            android:rotation="90"
+            android:textStyle="bold"
+            android:layout_marginRight="20dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frame2"
+        android:id="@+id/frame3"
+        android:layout_marginTop="10dp">
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/gm_r2"
+            android:text="R2"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:rotation="90"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/round_button"
+            />
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/gm_r1"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/round_button"
+            android:rotation="90"
+            android:text="R1"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginRight="20dp"/>
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-20dp"
+        android:layout_below="@+id/frame3">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content" >
+
+                <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/gm_a"
+                    android:src="@drawable/square"
+                    android:background="@drawable/round_button"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/gm_s"
+                    android:text="X"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/round_button"
+                    />
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:clickable="false"
+                    android:background="@color/transparent"/>
+
+                <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/gm_w"
+                    android:src="@drawable/gameright"
+                    android:background="@drawable/round_button"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/gm_d"
+                    android:text="o"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/round_button"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>
