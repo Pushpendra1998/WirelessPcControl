@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="WirelessPCControl-Libraries">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../WirelessPCControl-Libraries.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
