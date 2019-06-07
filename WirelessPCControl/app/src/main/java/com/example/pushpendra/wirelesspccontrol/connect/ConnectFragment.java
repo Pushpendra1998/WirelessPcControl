@@ -95,20 +95,15 @@ public class ConnectFragment extends Fragment {
                     connectButton.setEnabled(true);
                 } else {
                     status.setText("connected");
-
-//                           new Thread(new Runnable() {
-//                               public void run() {
-//                                   new Server(getActivity()).startServer(Integer.parseInt(port));
-//                               }
-//                           }).start();
                 }
             }
         }.execute();
-//               if (Connection_Btn.isConnect == true)
-//               {
-//                   status.setText("Connected");
-//               }
 
+    }
 
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        getActivity().setTitle(getResources().getString(R.string.connect));
     }
 }

@@ -78,4 +78,10 @@ public class PresentationFragment extends Fragment implements View.OnClickListen
         if(keyCode != 0)
             MainActivity.sendMessageToServer(keyCode);
     }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        getActivity().setTitle(getResources().getString(R.string.presentation));
+    }
 }

@@ -3,6 +3,7 @@
     <string name="connect">Connect</string>
     <string name="touchpad">Mouse</string>
     <string name="keyboard">Keyboard</string>
+    <string name="gamepad">Gamepad</string>
     <string name="file_transfer">File Transfer</string>
     <string name="file_download">File Download</string>
     <string name="media_player">Media Player</string>

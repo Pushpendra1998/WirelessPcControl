@@ -2,6 +2,7 @@ package com.example.pushpendra.wirelesspccontrol;
 
 import android.Manifest;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -55,15 +56,6 @@ public class MainActivity extends AppCompatActivity
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -127,13 +119,7 @@ public class MainActivity extends AppCompatActivity
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        // as you specify a parent activity in AndroidManifest.xml
 
         onNavigationItemSelected(item);
         return super.onOptionsItemSelected(item);
@@ -204,26 +190,12 @@ public class MainActivity extends AppCompatActivity
     public static void sendMessageToServer(String message) {
         if (MainActivity.clientSocket != null) {
             new SendMessageToServer().execute(String.valueOf(message), "STRING");
-            /*try {
-                MainActivity.objectOutputStream.writeObject(message);
-                MainActivity.objectOutputStream.flush();
-            } catch (Exception e) {
-                e.printStackTrace();
-                socketException();
-            }*/
         }
     }
 
     public static void sendMessageToServer(int message) {
         if (MainActivity.clientSocket != null) {
             new SendMessageToServer().execute(String.valueOf(message), "INT");
-            /*try {
-                MainActivity.objectOutputStream.writeObject(message);
-                MainActivity.objectOutputStream.flush();
-            } catch (Exception e) {
-                e.printStackTrace();
-                socketException();
-            }*/
         }
     }
 
@@ -243,26 +215,12 @@ public class MainActivity extends AppCompatActivity
     public static void sendMessageToServer(float message) {
         if (MainActivity.clientSocket != null) {
             new SendMessageToServer().execute(String.valueOf(message), "FLOAT");
-            /*try {
-                MainActivity.objectOutputStream.writeObject(message);
-                MainActivity.objectOutputStream.flush();
-            } catch (Exception e) {
-                e.printStackTrace();
-                socketException();
-            }*/
         }
     }
 
     public static void sendMessageToServer(long message) {
         if (MainActivity.clientSocket != null) {
             new SendMessageToServer().execute(String.valueOf(message), "LONG");
-            /*try {
-                MainActivity.objectOutputStream.writeObject(message);
-                MainActivity.objectOutputStream.flush();
-            } catch (Exception e) {
-                e.printStackTrace();
-                socketException();
-            }*/
         }
     }
 
