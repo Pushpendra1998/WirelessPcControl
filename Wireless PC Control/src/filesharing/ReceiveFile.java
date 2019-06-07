@@ -12,7 +12,7 @@ public class ReceiveFile {
             ObjectInputStream objectInputStream) {
         FileOutputStream fos = null;
         String path = new FileAPI().getHomeDirectoryPath();
-        path = path + "/RemoteControlPC/" + fileName;
+        path = path + "/WirelessPCControl/" + fileName;
         File file = new File(path);
         File dirs = new File(file.getParent());
         if (!dirs.exists()) {

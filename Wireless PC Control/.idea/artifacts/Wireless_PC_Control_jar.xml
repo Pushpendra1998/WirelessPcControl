@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Wireless PC Control:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Wireless_PC_Control_jar</output-path>
+    <root id="archive" name="Wireless PC Control.jar">
+      <element id="module-output" name="Wireless PC Control" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../WirelessPCControl-Libraries.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../core-3.3.3.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

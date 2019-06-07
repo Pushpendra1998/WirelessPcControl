@@ -16,7 +16,7 @@ import sample.ClientToAndroid;
 import static sample.MainScreenController.mainScreenController;
 
 
-public class FileOrFolderController implements Initializable {
+public class QrCodeLayout implements Initializable {
     
     @FXML
     ImageView iconImageView;

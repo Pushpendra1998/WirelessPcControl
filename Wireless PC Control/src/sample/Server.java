@@ -1,6 +1,5 @@
 package sample;
 
-import filesharing.Screenshot;
 import image.ImageViewer;
 import java.awt.Dimension;
 import java.awt.MouseInfo;
@@ -17,7 +16,6 @@ import filesharing.SendFilesList;
 import java.net.InetAddress;
 import javafx.application.Platform;
 import mousekeyboardcontrol.MouseKeyboardControl;
-import poweroff.PowerOff;
 import music.MusicPlayer;
 
 
@@ -60,7 +58,6 @@ public class Server {
             String message, filePath, fileName;
             int slideDuration;
             float volume;
-            PowerOff  powerOff = new PowerOff();
             MusicPlayer musicPlayer = new MusicPlayer();
             ImageViewer imageViewer = new ImageViewer();
             while (true) {
@@ -164,18 +161,7 @@ public class Server {
                                         fileName, fileSize, MainScreenController.objectInputStream
                                 );
                                 break;
-                            case "SHUTDOWN_PC":
-                                powerOff.shutdown();
-                                break;
-                            case "RESTART_PC":
-                                powerOff.restart();
-                                break;
-                            case "SLEEP_PC":
-                                powerOff.suspend();
-                                break;
-                            case "LOCK_PC":
-                                powerOff.lock();
-                                break;
+
                             case "PLAY_MUSIC":
                                 fileName = (String) MainScreenController.objectInputStream.readObject();
                                 filePath = new FileAPI().getHomeDirectoryPath();
@@ -209,11 +195,6 @@ public class Server {
                                 break; 
                             case "CLOSE_IMAGE_VIEWER":
                                 imageViewer.closeImageViewer();
-                                break;
-                            case "SCREENSHOT_REQUEST":
-                                new Screenshot().sendScreenshot(
-                                        MainScreenController.objectOutputStream
-                                );
                                 break;
                         }
                     } else {

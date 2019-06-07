@@ -39,7 +39,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.TilePane;
-import layout.FileOrFolderController;
+import layout.QrCodeLayout;
 
 public class MainScreenController implements Initializable {
     
@@ -237,12 +237,6 @@ public class MainScreenController implements Initializable {
         Image image = new Image(new File(path).toURI().toString());
         ImageView imageView = new ImageView(image);
         imageView.setPreserveRatio(true);
-//        Platform.runLater(() -> {
-//            imageView.fitWidthProperty().bind(tilePane.widthProperty());
-//            imageView.fitHeightProperty().bind(tilePane.heightProperty());
-//            tilePane.getChildren().clear();
-//            tilePane.getChildren().add(imageView);
-//        });
     }
 
     public void showImage(BufferedImage bufferedImage){
@@ -268,7 +262,7 @@ public class MainScreenController implements Initializable {
             tilePane.getChildren().clear();
             for (AvatarFile file : filesInFolder) {
                 FXMLLoader fxmlLoader = new FXMLLoader(
-                        getClass().getResource("/layout/FileOrFolder.fxml")
+                        getClass().getResource("/layout/QrCodeLayout.fxml")
                 );
                 Parent root;
                 try {
@@ -277,8 +271,8 @@ public class MainScreenController implements Initializable {
                     e.printStackTrace();
                     return;
                 }
-                FileOrFolderController fileOrFolderController = 
-                        (FileOrFolderController) fxmlLoader.getController();
+                QrCodeLayout qrCodeLayout =
+                        (QrCodeLayout) fxmlLoader.getController();
                 String fileType = file.getType();
                 Image icon = null;
                 switch(fileType) {
@@ -309,11 +303,11 @@ public class MainScreenController implements Initializable {
                         break;
                     default: ;
                 }
-                fileOrFolderController.setIcon(icon);
-                fileOrFolderController.setHeading(file.getHeading());
-                fileOrFolderController.setSubHeading(file.getSubheading());
-                fileOrFolderController.setPath(file.getPath());
-                fileOrFolderController.setFileType(file.getType());
+                qrCodeLayout.setIcon(icon);
+                qrCodeLayout.setHeading(file.getHeading());
+                qrCodeLayout.setSubHeading(file.getSubheading());
+                qrCodeLayout.setPath(file.getPath());
+                qrCodeLayout.setFileType(file.getType());
                 tilePane.getChildren().add(root);
             }
         });
